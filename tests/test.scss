@@ -1,0 +1,11 @@
+$foo: deeppink;
+$bar: $foo;
+
+:root {
+  --color-emphasis: deeppink;
+}
+
+.header {
+  background-color: darken(var(--color-emphasis));
+  color: var(--color-emphasis);
+}

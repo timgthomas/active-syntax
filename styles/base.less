@@ -1,4 +1,4 @@
-@import "syntax-variables";
+@import 'syntax-variables';
 
 atom-text-editor {
   background-color: @syntax-background-color;
@@ -118,6 +118,14 @@ atom-text-editor {
   &.syntax--parameter.syntax--function {
     color: @syntax-text-color;
   }
+
+  .syntax--punctuation {
+    color: inherit;
+  }
+
+  .syntax--constant {
+    color: @green;
+  }
 }
 
 .syntax--invalid.syntax--illegal {
@@ -144,7 +152,6 @@ atom-text-editor {
 .syntax--punctuation {
   &.syntax--definition {
 
-    &.syntax--variable,
     &.syntax--parameters,
     &.syntax--array {
       color: @syntax-text-color;
@@ -168,6 +175,10 @@ atom-text-editor {
 
   &.syntax--section.syntax--embedded {
     color: darken(@red, 10%);
+  }
+
+  &.syntax--separator ~ .syntax--variable {
+    color: @blue;
   }
 
 }
@@ -308,3 +319,9 @@ atom-text-editor {
 atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
 }
+
+
+// Overrides
+@import 'languages/_css';
+@import 'languages/_less';
+@import 'languages/_scss';
