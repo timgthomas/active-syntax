@@ -1,5 +1,12 @@
 .syntax--css {
 
+  // Variables
+  // > $foo: deeppink;
+  //   ^^^^
+  .syntax--variable {
+    color: @red;
+  }
+
   // Punctuation in values
   // > color: var(--foo);
   //             ^     ^
@@ -13,5 +20,18 @@
   .syntax--constant .syntax--unit {
     color: inherit;
   }
+
+  // Global variable use
+  // > $bar: $foo;
+  //         ^^^^
+  .syntax--punctuation {
+    &.syntax--separator {
+      ~ .syntax--variable,
+      ~ .syntax--variable .syntax--punctuation {
+        color: @blue;
+      }
+    }
+  }
+
 
 }

@@ -2,6 +2,8 @@ $foo: deeppink;
 $bar: $foo;
 $baz: 13.37%;
 
+@import '_base';
+
 :root {
   --color-emphasis: deeppink;
 }

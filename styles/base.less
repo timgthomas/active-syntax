@@ -88,14 +88,14 @@ atom-text-editor {
 }
 
 .syntax--constant {
-  color: @orange;
+  color: @syntax-text-color;
 
   &.syntax--character.syntax--escape {
     color: @cyan;
   }
 
   &.syntax--numeric {
-    color: @orange;
+    color: @green;
   }
 
   &.syntax--other.syntax--color {
@@ -109,10 +109,13 @@ atom-text-editor {
 }
 
 .syntax--variable {
-  color: @red;
 
   &.syntax--interpolation {
     color: darken(@red, 10%);
+  }
+
+  &.syntax--language {
+    color: @purple;
   }
 
   &.syntax--parameter.syntax--function {
@@ -177,15 +180,11 @@ atom-text-editor {
     color: darken(@red, 10%);
   }
 
-  &.syntax--separator ~ .syntax--variable {
-    color: @blue;
-  }
-
 }
 
 .syntax--support {
   &.syntax--class {
-    color: @light-orange;
+    color: @orange;
   }
 
   &.syntax--function  {
@@ -199,17 +198,21 @@ atom-text-editor {
 
 .syntax--entity {
   &.syntax--name.syntax--function {
+    color: @cyan;
+  }
+  &.syntax--name.syntax--constructor {
     color: @blue;
   }
+
   &.syntax--name.syntax--type {
-    color: @light-orange;
+    color: @orange;
   }
 
   &.syntax--other.syntax--inherited-class {
-    color: @green;
+    color: @red;
   }
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @light-orange;
+    color: @red;
   }
 
   &.syntax--name.syntax--section {
@@ -228,6 +231,18 @@ atom-text-editor {
 .syntax--meta {
   &.syntax--class {
     color: @light-orange;
+  }
+
+  &.syntax--definition {
+    .syntax--function {
+      color: @blue;
+    }
+    .syntax--keyword {
+      color: @purple;
+    }
+    .syntax--variable {
+      color: @syntax-text-color;
+    }
   }
 
   &.syntax--link {
@@ -311,6 +326,22 @@ atom-text-editor {
   &.syntax--heading {
     color: @green;
   }
+}
+
+.syntax--import {
+
+  .syntax--variable {
+    color: @syntax-text-color;
+  }
+
+}
+
+.syntax--export {
+
+  .syntax--variable {
+    color: @purple;
+  }
+
 }
 
 
