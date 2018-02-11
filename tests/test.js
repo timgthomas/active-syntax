@@ -3,16 +3,21 @@ import BaseClass, { func } from 'base-class';
 const foos = [ 'foo', 'bar' ],
       bars = 'bars'.split();
 
+let defaults = {
+  foo: 'foo',
+  bar: null,
+};
+
 export default class ChildClass extends BaseClass {
 
   constructor(foo, bar) {
-    super();
+    super(defaults, ...arguments);
     this.foo = func(foo);
     this.bar = this.bar(bar);
   }
 
   get foo() {
-    console.log('getting foo...');
+    console.log(`getting foo (${this.bar(foo)})...`);
     return this.foo;
   }
 

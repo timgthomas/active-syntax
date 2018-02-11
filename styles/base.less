@@ -106,6 +106,10 @@ atom-text-editor {
   &.syntax--other.syntax--symbol {
     color: @green;
   }
+
+  .syntax--assignment ~ & {
+    color: @green;
+  }
 }
 
 .syntax--variable {
@@ -150,6 +154,10 @@ atom-text-editor {
   &.syntax--other.syntax--link {
     color: @red;
   }
+
+  .syntax--embedded {
+    color: @syntax-text-color;
+  }
 }
 
 .syntax--punctuation {
@@ -177,7 +185,7 @@ atom-text-editor {
   }
 
   &.syntax--section.syntax--embedded {
-    color: darken(@red, 10%);
+    color: lighten(@green, 25%);
   }
 
 }
