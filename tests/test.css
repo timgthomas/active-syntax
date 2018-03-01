@@ -18,4 +18,5 @@ div:nth-of-type(2n + 1) {}
   background-color: var(--color-emphasis);
   color: var(--color-emphasis);
   cursor: pointer;
+  width: calc(100vh - 13.37%);
 }
