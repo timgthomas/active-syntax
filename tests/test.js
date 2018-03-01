@@ -8,6 +8,10 @@ let defaults = {
   bar: null,
 };
 
+for (let foo of foos) {}
+for (var def in defaults) {}
+for (var i = 0; i < foos.length; i++) {}
+
 export default class ChildClass extends BaseClass {
 
   constructor(foo, bar) {
