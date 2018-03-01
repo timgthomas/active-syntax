@@ -8,7 +8,12 @@ $baz: 13.37%;
   --color-emphasis: deeppink;
 }
 
+div {
+  box-sizing: border-box;
+}
+
 .header {
   background-color: darken(var(--color-emphasis));
   color: var(--color-emphasis);
+  cursor: pointer;
 }
