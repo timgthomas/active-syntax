@@ -8,4 +8,18 @@
     color: @purple;
   }
 
+  // Arrow function symbol
+  // > let fn = x => {}
+  //              ^^
+  .syntax--arrow {
+    color: @syntax-text-color;
+  }
+
+  // Function definition with `let`
+  // > let fn = x => {}
+  //       ^^
+  .syntax--var + .syntax--function > .syntax--name {
+    color: @syntax-text-color;
+  }
+
 }
