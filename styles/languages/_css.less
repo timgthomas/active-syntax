@@ -36,8 +36,16 @@
   // Specific property names
   // > cursor: pointer;
   //   ^----^
-  .syntax--property-list .syntax--entity.syntax--name.syntax--tag {
+  .syntax--property-list .syntax--entity.syntax--name.syntax--tag:not(.syntax--custom) {
     color: inherit;
+  }
+
+  // Pseudoclass
+  // > div:first-child() {}
+  //       ^^^^^^^^^^^
+  .syntax--entity.syntax--name.syntax--tag.syntax--custom,
+  .syntax--entity.syntax--other.syntax--pseudo-class {
+    color: @light-orange;
   }
 
 }
