@@ -26,6 +26,9 @@ export default class ChildClass extends BaseClass {
   }
 
   bar(val) {
+    if (!val) {
+      throw new Error('val is not defined');
+    }
     let result = Math.round(val * 0.42);
     return result + foos.length;
   }
