@@ -30,4 +30,8 @@ export default class ChildClass extends BaseClass {
     return result + foos.length;
   }
 
+  baz() {
+    return true;
+  }
+
 }
