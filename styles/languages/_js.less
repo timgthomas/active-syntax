@@ -5,7 +5,8 @@
   //                ^^
   .syntax--keyword.syntax--operator.syntax--in,
   .syntax--keyword.syntax--operator.syntax--of,
-  .syntax--keyword.syntax--operator.syntax--new {
+  .syntax--keyword.syntax--operator.syntax--new,
+  .syntax--keyword.syntax--operator.syntax--typeof {
     color: @purple;
   }
 
@@ -29,6 +30,13 @@
   .syntax--constant.syntax--boolean,
   .syntax--constant.syntax--null {
     color: @green;
+  }
+
+  // Class names
+  // export default class ChildClass extends BaseClass
+  //                      ^^^^^^^^^^
+  .syntax--type + .syntax--class {
+    color: @red;
   }
 
 }

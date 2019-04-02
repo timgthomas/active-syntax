@@ -30,6 +30,7 @@ export default class ChildClass extends BaseClass {
       throw new Error('val is not defined');
     }
     let result = Math.round(val * 0.42);
+    if typeof result !== 'number' return -1;
     return result + foos.length;
   }
 
