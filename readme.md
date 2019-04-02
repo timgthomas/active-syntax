@@ -14,6 +14,13 @@ To install Active, search for `active-syntax` on Atom's "Install" screen, or use
 $ apm install active-syntax
 ```
 
+## Development
+
+To make changes to Active:
+
+1. Inside the repo directory, run `apm link -d`. This will symlink the repo folder to `~/.atom/dev/packages/`.
+1. Open the directory in dev mode with `atom -d .`. In this mode, any changes you make will appear immediately.
+
 ## Publishing to APM
 
 ```
