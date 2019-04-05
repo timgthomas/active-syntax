@@ -1,10 +1,10 @@
-<img src="https://raw.githubusercontent.com/timgthomas/active-syntax/master/logo.png" width="219">
+![Active Syntax](https://raw.githubusercontent.com/timgthomas/active-syntax/master/logo.png?raw=true)
 
 # Active Syntax
 
 A simple syntax theme based on colors from Apple's Activity apps.
 
-<img src="https://raw.githubusercontent.com/timgthomas/active-syntax/master/preview.png" width="450">
+![A preview of the theme](https://raw.githubusercontent.com/timgthomas/active-syntax/master/preview.png?raw=true)
 
 ## Installation
 
